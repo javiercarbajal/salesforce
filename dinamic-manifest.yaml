@@ -1,0 +1,22 @@
+apiVersion: deployments.db.dreamworks.io/v1
+kind: "${parameters['type']"
+metadata:
+ name: "${parameters['name']"
+ namespace: "${parameters['namespace']"
+ labels:
+   deployments.db.dreamworks.io/service: "${parameters['service']"
+   deployments.db.dreamworks.io/environment: "${parameters['environment']"
+   deployments.db.dreamworks.io/build: "${parameters['build']"
+    name: "${parameters['name']"
+    namespace: "${parameters['namespace']"
+spec:
+  version: "${parameters['version']"
+  nodes: "${parameters['nodes']"
+  storageClass:
+    provisioner: "kubernetes.io/${parameters['storageProvder']}"
+  resources:
+    cpu: ""${parameters['cpu']""
+    memory: ""${parameters['memory']""
+    storage: ""${parameters['storage']""
+  configuration:
+    heapsize: "${parameters['heapsize']"
